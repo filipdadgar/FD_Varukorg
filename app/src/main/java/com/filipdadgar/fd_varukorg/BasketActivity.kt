@@ -23,7 +23,9 @@ class BasketActivity : AppCompatActivity() {
     }
     
     private fun setupRecyclerView() {
-        basketAdapter = BasketAdapter(this)
+        basketAdapter = BasketAdapter(this) {
+            updateUI() // Refresh UI when quantity changes
+        }
         binding.recyclerViewBasket.apply {
             layoutManager = LinearLayoutManager(this@BasketActivity)
             adapter = basketAdapter

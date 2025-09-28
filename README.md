@@ -6,6 +6,11 @@ A complete Android e-commerce application developed with Kotlin that demonstrate
 
 FD Varukorg is a fictional electronics store app that allows users to browse products, add them to a shopping cart, and complete a simulated order. The app supports both Swedish and English languages and implements modern Android architecture.
 
+## Screenshots
+![MainActivity](screenshots/start.png)
+![ShopActivity](screenshots/product.png)
+![BasketActivity](screenshots/cart.png)
+
 ## ✨ Features
 
 ### 🏠 MainActivity (Home Page)

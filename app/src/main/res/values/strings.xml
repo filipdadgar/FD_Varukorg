@@ -88,4 +88,8 @@
         <item>headphones</item>
         <item>watch</item>
     </string-array>
+    
+    <!-- Quantity Controls -->
+    <string name="increase_quantity">Öka antal</string>
+    <string name="decrease_quantity">Minska antal</string>
 </resources>

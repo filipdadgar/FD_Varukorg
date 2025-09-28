@@ -43,12 +43,59 @@
                 android:textColor="@color/design_default_color_primary"
                 android:layout_marginTop="4dp" />
 
-            <TextView
-                android:id="@+id/tv_quantity"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:layout_marginTop="4dp" />
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_decrease_quantity"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="-"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:insetLeft="0dp"
+                    android:insetRight="0dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:contentDescription="@string/decrease_quantity" />
+
+                <TextView
+                    android:id="@+id/tv_quantity"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_increase_quantity"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="+"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:insetLeft="0dp"
+                    android:insetRight="0dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:contentDescription="@string/increase_quantity" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

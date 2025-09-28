@@ -7,7 +7,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.filipdadgar.fd_varukorg.databinding.ItemBasketBinding
 import java.text.DecimalFormat
 
-class BasketAdapter(private val context: Context) : RecyclerView.Adapter<BasketAdapter.BasketViewHolder>() {
+class BasketAdapter(
+    private val context: Context,
+    private val onQuantityChanged: () -> Unit
+) : RecyclerView.Adapter<BasketAdapter.BasketViewHolder>() {
     
     private var basketItems = listOf<BasketItem>()
     
@@ -32,7 +35,7 @@ class BasketAdapter(private val context: Context) : RecyclerView.Adapter<BasketA
         fun bind(basketItem: BasketItem) {
             binding.tvProductName.text = context.getString(basketItem.product.nameResId)
             binding.tvProductPrice.text = context.getString(basketItem.product.priceResId)
-            binding.tvQuantity.text = context.getString(R.string.item_quantity, basketItem.quantity)
+            binding.tvQuantity.text = basketItem.quantity.toString()
             
             val price = BasketManager.getItemPrice(basketItem.product)
             val total = price * basketItem.quantity
@@ -40,6 +43,17 @@ class BasketAdapter(private val context: Context) : RecyclerView.Adapter<BasketA
             binding.tvItemTotal.text = context.getString(R.string.item_total, formattedTotal)
             
             binding.ivProductImage.setImageResource(basketItem.product.imageResId)
+            
+            // Quantity controls
+            binding.btnIncreaseQuantity.setOnClickListener {
+                BasketManager.increaseQuantity(basketItem.product)
+                onQuantityChanged()
+            }
+            
+            binding.btnDecreaseQuantity.setOnClickListener {
+                BasketManager.decreaseQuantity(basketItem.product)
+                onQuantityChanged()
+            }
         }
     }
 }

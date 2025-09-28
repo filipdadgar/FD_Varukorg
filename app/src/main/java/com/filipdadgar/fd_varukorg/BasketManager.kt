@@ -29,6 +29,25 @@ object BasketManager {
         return if (isSwedish) product.priceSEK else product.priceUSD
     }
     
+    fun increaseQuantity(product: Product) {
+        val existingItem = basketItems.find { it.product.id == product.id }
+        existingItem?.let { it.quantity += 1 }
+    }
+    
+    fun decreaseQuantity(product: Product) {
+        val existingItem = basketItems.find { it.product.id == product.id }
+        existingItem?.let { 
+            it.quantity -= 1
+            if (it.quantity <= 0) {
+                basketItems.remove(it)
+            }
+        }
+    }
+    
+    fun removeItem(product: Product) {
+        basketItems.removeAll { it.product.id == product.id }
+    }
+    
     fun clearBasket() {
         basketItems.clear()
     }
