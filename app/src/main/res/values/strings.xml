@@ -54,4 +54,33 @@
     <string name="order_confirmed">Beställning bekräftad! Tack för ditt köp.</string>
     <string name="order_cancelled">Beställning avbruten</string>
     <string name="fill_all_fields">Vänligen fyll i alla fält</string>
+    
+    <!-- Product Arrays -->
+    <string-array name="product_names">
+        <item>@string/product_smartphone</item>
+        <item>@string/product_laptop</item>
+        <item>@string/product_headphones</item>
+        <item>@string/product_watch</item>
+    </string-array>
+    
+    <string-array name="product_prices_sek">
+        <item>8999</item>
+        <item>15999</item>
+        <item>1299</item>
+        <item>2499</item>
+    </string-array>
+    
+    <string-array name="product_prices_usd">
+        <item>899</item>
+        <item>1599</item>
+        <item>129</item>
+        <item>249</item>
+    </string-array>
+    
+    <string-array name="product_images">
+        <item>smartphone</item>
+        <item>laptop</item>
+        <item>headphones</item>
+        <item>watch</item>
+    </string-array>
 </resources>

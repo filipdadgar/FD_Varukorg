@@ -4,29 +4,63 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.filipdadgar.fd_varukorg.databinding.ActivityShopBinding
+import java.util.Locale
 
 class ShopActivity : AppCompatActivity() {
     
     private lateinit var binding: ActivityShopBinding
     private lateinit var products: List<Product>
+    private lateinit var productAdapter: ProductAdapter
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityShopBinding.inflate(layoutInflater)
         setContentView(binding.root)
         
+        setupRecyclerView()
         initializeProducts()
         setupClickListeners()
     }
     
+    private fun setupRecyclerView() {
+        productAdapter = ProductAdapter(this) { product ->
+            BasketManager.addProduct(product)
+            Toast.makeText(this, "${getString(product.nameResId)} ${getString(R.string.btn_add_to_basket)}", Toast.LENGTH_SHORT).show()
+        }
+        
+        binding.recyclerViewProducts.apply {
+            layoutManager = LinearLayoutManager(this@ShopActivity)
+            adapter = productAdapter
+        }
+    }
+    
     private fun initializeProducts() {
-        products = listOf(
-            Product(1, R.string.product_smartphone, R.string.product_smartphone_price, R.drawable.ic_launcher_foreground, 8999.0, 899.0),
-            Product(2, R.string.product_laptop, R.string.product_laptop_price, R.drawable.ic_launcher_foreground, 15999.0, 1599.0),
-            Product(3, R.string.product_headphones, R.string.product_headphones_price, R.drawable.ic_launcher_foreground, 1299.0, 129.0),
-            Product(4, R.string.product_watch, R.string.product_watch_price, R.drawable.ic_launcher_foreground, 2499.0, 249.0)
-        )
+        val productNames = resources.getStringArray(R.array.product_names)
+        val imageNames = resources.getStringArray(R.array.product_images)
+        
+        // Använd rätt pris-array baserat på språk
+        val isSwedish = Locale.getDefault().language == "sv"
+        val pricesSEK = resources.getStringArray(R.array.product_prices_sek)
+        val pricesUSD = if (isSwedish) pricesSEK else try {
+            resources.getStringArray(R.array.product_prices_usd)
+        } catch (e: Exception) {
+            pricesSEK // Fallback till SEK om USD inte finns
+        }
+        
+        products = (0 until productNames.size).map { position ->
+            Product.createFromArrays(
+                context = this,
+                position = position,
+                nameArray = productNames,
+                pricesSEK = pricesSEK,
+                pricesUSD = pricesUSD,
+                imageNames = imageNames
+            )
+        }
+        
+        productAdapter.updateProducts(products)
     }
     
     private fun setupClickListeners() {
@@ -37,30 +71,6 @@ class ShopActivity : AppCompatActivity() {
         binding.btnGoToBasket.setOnClickListener {
             val intent = Intent(this, BasketActivity::class.java)
             startActivity(intent)
-        }
-        
-        // Product 1 - Smartphone
-        binding.btnAddProduct1.setOnClickListener {
-            BasketManager.addProduct(products[0])
-            Toast.makeText(this, "${getString(products[0].nameResId)} ${getString(R.string.btn_add_to_basket)}", Toast.LENGTH_SHORT).show()
-        }
-        
-        // Product 2 - Laptop
-        binding.btnAddProduct2.setOnClickListener {
-            BasketManager.addProduct(products[1])
-            Toast.makeText(this, "${getString(products[1].nameResId)} ${getString(R.string.btn_add_to_basket)}", Toast.LENGTH_SHORT).show()
-        }
-        
-        // Product 3 - Headphones
-        binding.btnAddProduct3.setOnClickListener {
-            BasketManager.addProduct(products[2])
-            Toast.makeText(this, "${getString(products[2].nameResId)} ${getString(R.string.btn_add_to_basket)}", Toast.LENGTH_SHORT).show()
-        }
-        
-        // Product 4 - Watch
-        binding.btnAddProduct4.setOnClickListener {
-            BasketManager.addProduct(products[3])
-            Toast.makeText(this, "${getString(products[3].nameResId)} ${getString(R.string.btn_add_to_basket)}", Toast.LENGTH_SHORT).show()
         }
     }
 }
