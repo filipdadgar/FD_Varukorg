@@ -27,7 +27,11 @@ class ShopActivity : AppCompatActivity() {
     private fun setupRecyclerView() {
         productAdapter = ProductAdapter(this) { product ->
             BasketManager.addProduct(product)
-            Toast.makeText(this, "${getString(product.nameResId)} ${getString(R.string.btn_add_to_basket)}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this, 
+                "${getString(product.nameResId)} ${getString(R.string.btn_add_to_basket)}", 
+                Toast.LENGTH_SHORT
+            ).show()
         }
         
         binding.recyclerViewProducts.apply {
