@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">FD Shopping Cart</string>
+    <string name="footer_label">v1.0 • by Filip Dadgar</string>
     
     <!-- MainActivity -->
     <string name="company_name">FD Electronics AB</string>
@@ -54,6 +55,10 @@
     <string name="order_confirmed">Order confirmed! Thank you for your purchase.</string>
     <string name="order_cancelled">Order cancelled</string>
     <string name="fill_all_fields">Please fill in all fields</string>
+    
+    <!-- Content Descriptions -->
+    <string name="company_logo_description">FD Electronics company logo</string>
+    <string name="product_image_description">Product image</string>
     
     <!-- Product Arrays -->
     <string-array name="product_names">

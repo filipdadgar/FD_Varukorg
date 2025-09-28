@@ -56,6 +56,10 @@
     <string name="order_cancelled">Beställning avbruten</string>
     <string name="fill_all_fields">Vänligen fyll i alla fält</string>
     
+    <!-- Content Descriptions -->
+    <string name="company_logo_description">FD Electronics företagslogotyp</string>
+    <string name="product_image_description">Produktbild</string>
+    
     <!-- Product Arrays -->
     <string-array name="product_names">
         <item>@string/product_smartphone</item>
