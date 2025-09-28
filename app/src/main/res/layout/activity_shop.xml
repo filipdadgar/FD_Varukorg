@@ -33,8 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="16dp"
-            style="?android:attr/buttonBarStyle">
+            android:layout_marginTop="16dp">
 
             <Button
                 android:id="@+id/btn_back_to_main"
@@ -43,7 +42,7 @@
                 android:layout_weight="1"
                 android:text="@string/btn_back_to_main"
                 android:layout_marginEnd="8dp"
-                style="?android:attr/buttonBarButtonStyle" />
+                style="@style/Widget.Material3.Button.OutlinedButton" />
 
             <Button
                 android:id="@+id/btn_go_to_basket"
@@ -52,7 +51,7 @@
                 android:layout_weight="1"
                 android:text="@string/btn_go_to_basket"
                 android:layout_marginStart="8dp"
-                style="?android:attr/buttonBarButtonStyle" />
+                style="@style/Widget.Material3.Button" />
 
         </LinearLayout>
 

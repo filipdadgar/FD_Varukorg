@@ -103,8 +103,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center"
-                style="?android:attr/buttonBarStyle">
+                android:gravity="center">
 
                 <Button
                     android:id="@+id/btn_swedish"
@@ -112,14 +111,14 @@
                     android:layout_height="wrap_content"
                     android:text="@string/btn_swedish"
                     android:layout_marginEnd="16dp"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    style="@style/Widget.Material3.Button.OutlinedButton" />
 
                 <Button
                     android:id="@+id/btn_english"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/btn_english"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    style="@style/Widget.Material3.Button.OutlinedButton" />
 
             </LinearLayout>
 
