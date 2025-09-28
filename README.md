@@ -4,12 +4,22 @@ A complete Android e-commerce application developed with Kotlin that demonstrate
 
 ## 📱 Overview
 
-FD Varukorg is a fictional electronics store app that allows users to browse products, add them to a shopping cart, and complete a simulated order. The app supports both Swedish and English languages and implements modern Android architecture.
+FD Varukorg is a fictional electronics store app that allows users to browse products, add them to a shopping cart with quantity controls, and complete a simulated order. The app supports both Swedish and English languages, features a persistent footer navigation, and implements modern Android architecture with enhanced user experience.
 
 ## Screenshots
-![MainActivity](screenshots/start.png)
-![ShopActivity](screenshots/product.png)
-![BasketActivity](screenshots/cart.png)
+
+<table>
+<tr>
+<td><img src="screenshots/start.png" alt="MainActivity" width="250"/></td>
+<td><img src="screenshots/product.png" alt="ShopActivity" width="250"/></td>
+<td><img src="screenshots/cart.png" alt="BasketActivity" width="250"/></td>
+</tr>
+<tr>
+<td align="center"><b>MainActivity</b><br/>Home & Company Info</td>
+<td align="center"><b>ShopActivity</b><br/>Product Catalog</td>
+<td align="center"><b>BasketActivity</b><br/>Shopping Cart</td>
+</tr>
+</table>
 
 ## ✨ Features
 
@@ -27,8 +37,10 @@ FD Varukorg is a fictional electronics store app that allows users to browse pro
 
 ### 🛒 BasketActivity (Shopping Cart)
 - Display all selected products with images and information
-- Calculate and display total price
-- Handle empty shopping carts
+- **Quantity controls** with + and - buttons for each product
+- **Real-time price calculation** that updates as quantities change
+- **Automatic item removal** when quantity reaches zero
+- Handle empty shopping carts with visual feedback
 - Responsive design with RecyclerView
 
 ### ✅ ConfirmActivity (Order Confirmation)
@@ -126,10 +138,13 @@ git clone https://github.com/filipdadgar/FD_Varukorg.git
 - Intuitive navigation flow
 
 ### User Experience
-- Clear visual feedback (Toast messages)
-- User input validation
+- **Enhanced notification system** with improved Toast positioning
+- **Persistent footer navigation** on all screens for easy navigation
+- **Interactive quantity controls** in shopping cart
+- User input validation with clear error messages
 - Simple navigation between screens
 - Language switching without app restart
+- **Accessibility support** with proper content descriptions
 
 ## 🔄 App Flow
 
@@ -150,13 +165,18 @@ MainActivity (Back to Start)
 ### Key Classes
 
 #### BasketManager
-Singleton that manages the cart state:
+Singleton that manages the cart state with quantity controls:
 ```kotlin
 object BasketManager {
     fun addProduct(product: Product, quantity: Int = 1)
+    fun increaseQuantity(product: Product)
+    fun decreaseQuantity(product: Product)
+    fun removeItem(product: Product)
     fun getBasketItems(): List<BasketItem>
     fun getTotalPrice(): Double
+    fun getItemPrice(product: Product): Double
     fun clearBasket()
+    fun isEmpty(): Boolean
 }
 ```
 
@@ -173,15 +193,25 @@ data class Product(
 )
 ```
 
-## 🌟 Future Improvements
+## 🌟 Recent Improvements
+
+- [x] **Quantity management in cart** with + and - buttons
+- [x] **Real-time price calculations** that update instantly
+- [x] **Automatic item removal** when quantity reaches zero
+- [x] **Enhanced notification positioning** for better UX
+- [x] **Persistent footer navigation** across all screens
+- [x] **Improved accessibility** with content descriptions
+- [x] **Better button visibility** and responsive design
+
+## 🔮 Future Improvements
 
 - [ ] User authentication
 - [ ] Database persistence (Room)
 - [ ] Product search and filtering
-- [ ] Quantity management in cart
 - [ ] Push notifications
 - [ ] Favorite products
 - [ ] Order history
+- [ ] Product reviews and ratings
 
 ## 👨‍💻 Developer
 
