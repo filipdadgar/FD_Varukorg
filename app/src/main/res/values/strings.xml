@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">FD Varukorg</string>
+    
+    <!-- MainActivity -->
+    <string name="company_name">FD Electronics AB</string>
+    <string name="company_description">Välkommen till FD Electronics - din partner för högkvalitativa elektronikprodukter. Vi erbjuder ett brett sortiment av smartphones, laptops, hörlurar och smarta enheter till konkurrenskraftiga priser.</string>
+    <string name="products_available">Produkter tillgängliga:</string>
+    <string name="product_1">• Smartphones - Senaste modellerna</string>
+    <string name="product_2">• Laptops - För arbete och gaming</string>
+    <string name="product_3">• Hörlurar - Trådlösa och kabelanslutna</string>
+    <string name="product_4">• Smarta klockor - Fitness och kommunikation</string>
+    <string name="btn_shop">Handla Nu</string>
+    <string name="btn_swedish">Svenska</string>
+    <string name="btn_english">English</string>
+    <string name="language_selection">Välj språk:</string>
+    
+    <!-- ShopActivity -->
+    <string name="shop_title">Välj Produkter</string>
+    <string name="btn_back_to_main">Tillbaka till Huvudsida</string>
+    <string name="btn_go_to_basket">Gå till Varukorg</string>
+    <string name="btn_add_to_basket">Lägg i varukorg</string>
+    <string name="quantity">Antal: %d</string>
+    
+    <!-- Products -->
+    <string name="product_smartphone">Smartphone X1</string>
+    <string name="product_smartphone_price">8 999 kr</string>
+    <string name="product_laptop">Gaming Laptop Pro</string>
+    <string name="product_laptop_price">15 999 kr</string>
+    <string name="product_headphones">Trådlösa Hörlurar</string>
+    <string name="product_headphones_price">1 299 kr</string>
+    <string name="product_watch">Smart Klocka</string>
+    <string name="product_watch_price">2 499 kr</string>
+    
+    <!-- BasketActivity -->
+    <string name="basket_title">Varukorg</string>
+    <string name="btn_back_to_shop">Tillbaka till Butik</string>
+    <string name="btn_go_to_confirm">Fortsätt till Beställning</string>
+    <string name="total_price">Totalpris: %s kr</string>
+    <string name="empty_basket">Varukorgen är tom</string>
+    <string name="item_quantity">Antal: %d</string>
+    <string name="item_total">Totalt: %s kr</string>
+    
+    <!-- ConfirmActivity -->
+    <string name="confirm_title">Bekräfta Beställning</string>
+    <string name="delivery_info">Leveransinformation</string>
+    <string name="payment_info">Betalningsinformation</string>
+    <string name="first_name">Förnamn</string>
+    <string name="last_name">Efternamn</string>
+    <string name="street_address">Gatuadress</string>
+    <string name="city">Stad</string>
+    <string name="card_number">Kortnummer</string>
+    <string name="btn_cancel">Avbryt</string>
+    <string name="btn_confirm_order">Bekräfta Beställning</string>
+    <string name="order_confirmed">Beställning bekräftad! Tack för ditt köp.</string>
+    <string name="order_cancelled">Beställning avbruten</string>
+    <string name="fill_all_fields">Vänligen fyll i alla fält</string>
+</resources>

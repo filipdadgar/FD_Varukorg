@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">FD Shopping Cart</string>
+    
+    <!-- MainActivity -->
+    <string name="company_name">FD Electronics AB</string>
+    <string name="company_description">Welcome to FD Electronics - your partner for high-quality electronic products. We offer a wide range of smartphones, laptops, headphones and smart devices at competitive prices.</string>
+    <string name="products_available">Products available:</string>
+    <string name="product_1">• Smartphones - Latest models</string>
+    <string name="product_2">• Laptops - For work and gaming</string>
+    <string name="product_3">• Headphones - Wireless and wired</string>
+    <string name="product_4">• Smart watches - Fitness and communication</string>
+    <string name="btn_shop">Shop Now</string>
+    <string name="btn_swedish">Svenska</string>
+    <string name="btn_english">English</string>
+    <string name="language_selection">Select language:</string>
+    
+    <!-- ShopActivity -->
+    <string name="shop_title">Select Products</string>
+    <string name="btn_back_to_main">Back to Main</string>
+    <string name="btn_go_to_basket">Go to Cart</string>
+    <string name="btn_add_to_basket">Add to cart</string>
+    <string name="quantity">Quantity: %d</string>
+    
+    <!-- Products -->
+    <string name="product_smartphone">Smartphone X1</string>
+    <string name="product_smartphone_price">$899</string>
+    <string name="product_laptop">Gaming Laptop Pro</string>
+    <string name="product_laptop_price">$1599</string>
+    <string name="product_headphones">Wireless Headphones</string>
+    <string name="product_headphones_price">$129</string>
+    <string name="product_watch">Smart Watch</string>
+    <string name="product_watch_price">$249</string>
+    
+    <!-- BasketActivity -->
+    <string name="basket_title">Shopping Cart</string>
+    <string name="btn_back_to_shop">Back to Shop</string>
+    <string name="btn_go_to_confirm">Continue to Order</string>
+    <string name="total_price">Total price: $%s</string>
+    <string name="empty_basket">Cart is empty</string>
+    <string name="item_quantity">Quantity: %d</string>
+    <string name="item_total">Total: $%s</string>
+    
+    <!-- ConfirmActivity -->
+    <string name="confirm_title">Confirm Order</string>
+    <string name="delivery_info">Delivery Information</string>
+    <string name="payment_info">Payment Information</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="street_address">Street Address</string>
+    <string name="city">City</string>
+    <string name="card_number">Card Number</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_confirm_order">Confirm Order</string>
+    <string name="order_confirmed">Order confirmed! Thank you for your purchase.</string>
+    <string name="order_cancelled">Order cancelled</string>
+    <string name="fill_all_fields">Please fill in all fields</string>
+</resources>
