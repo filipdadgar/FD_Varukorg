@@ -9,7 +9,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:padding="16dp"
+        android:padding="12dp"
         app:layout_constraintBottom_toTopOf="@+id/footer_label"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -25,7 +25,7 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="32dp" />
+                android:layout_marginBottom="24dp" />
 
             <!-- Delivery Information Section -->
             <com.google.android.material.card.MaterialCardView
@@ -108,15 +108,13 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Payment Information Section -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="32dp"
-                app:cardElevation="4dp"
-                app:cardCornerRadius="8dp">
-
-                <LinearLayout
+        <!-- Payment Information Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="8dp">                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
