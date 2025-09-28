@@ -11,7 +11,7 @@
         android:layout_height="0dp"
         android:orientation="vertical"
         android:padding="12dp"
-        app:layout_constraintBottom_toTopOf="@+id/footer_label"
+        app:layout_constraintBottom_toTopOf="@+id/footer_container"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -57,12 +57,30 @@
 
     </LinearLayout>
 
-    <include
-        layout="@layout/footer_layout"
+    <LinearLayout
+        android:id="@+id/footer_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/footer_background"
+        android:orientation="horizontal"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/footer_label"
+            android:textColor="@color/footerText"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
