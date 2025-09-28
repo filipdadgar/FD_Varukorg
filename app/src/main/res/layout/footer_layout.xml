@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="12dp"
-    app:cardBackgroundColor="@color/footerBg"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="2dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.5"
-    app:layout_constraintStart_toStartOf="parent">
+    android:layout_marginBottom="80dp"
+    android:background="@drawable/footer_background"
+    android:orientation="horizontal"
+    android:gravity="center">
 
     <TextView
         android:id="@+id/footer_label"
@@ -18,11 +13,11 @@
         android:layout_height="wrap_content"
         android:text="@string/footer_label"
         android:textColor="@color/footerText"
-        android:textSize="12sp"
-        android:textStyle="bold"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp" />
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp" />
 
-</com.google.android.material.card.MaterialCardView>
+</LinearLayout>
